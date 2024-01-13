@@ -4,7 +4,7 @@ class MunchiesFacade
     current_weather = WeatherFacade.get_weather(lat_lng[:lat], lat_lng[:lng])[:current_weather]
     results = YelpApiService.get_businesses(cuisine: cuisine, lat: lat_lng[:lat], lng: lat_lng[:lng])
 
-    if results[:status] == 200
+    if results[:status] == 200 && !lat_lng.nil? && !current_weather.nil?
       best = results[:data][:businesses].first
       return {
         destination_city: "#{best[:location][:city]}, #{best[:location][:state]}",
@@ -20,7 +20,7 @@ class MunchiesFacade
         }
       }
     else
-      raise Faraday::BadRequestError, "Yelp API error: #{response[:status]}, #{response[:data][:error][:message]}"
+      raise Faraday::BadRequestError, "Yelp API error: #{results[:status]}, #{results[:data][:error][:code]}"
     end
   end
 end
