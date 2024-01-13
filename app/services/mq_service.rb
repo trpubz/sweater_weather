@@ -1,4 +1,4 @@
-class MqService
+class MqService < TrdPartyServices
   def self.get_lat_lon(location)
     response = conn.get("geocoding/v1/address?") do |req|
       req.params.merge!(
@@ -18,9 +18,5 @@ class MqService
       conn.request :url_encoded
       conn.params = {"key" => Rails.application.credentials.mapquest_key}
     end
-  end
-
-  def self.response_conversion(response)
-    {status: response.status, data: JSON.parse(response.body, symbolize_names: true)}
   end
 end

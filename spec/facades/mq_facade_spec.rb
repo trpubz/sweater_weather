@@ -2,13 +2,11 @@ require "rails_helper"
 
 RSpec.describe MqFacade do
   describe "::get_lat_lon" do
-    it "returns a hash of the mq endpoint", :vcr do
-      results = MqFacade.get_lat_long("Del Norte, CO")
-      expect(results).to be_a Hash
-      expect(results).to have_key :status
-      expect(results).to have_key :data
-      expect(results[:data]).to be_a Hash
-      expect(results[:data][:results]).to be_an Array
+    it "returns a hash of the lat lon data", :vcr do
+      lat_lon = MqFacade.get_lat_long("Del Norte, CO")
+      expect(lat_lon).to be_a(Hash)
+      expect(lat_lon.keys).to include(:lat, :lng)
+      expect(lat_lon.values.first).to be_a(Float)
     end
   end
 end
