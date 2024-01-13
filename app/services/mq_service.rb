@@ -1,5 +1,5 @@
 class MqService < TrdPartyServices
-  def self.get_lat_lon(location)
+  def self.get_lat_lng(location)
     response = conn.get("geocoding/v1/address?") do |req|
       req.params.merge!(
         {

@@ -1,0 +1,528 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<MQ_API_KEY>&location=Del+Norte%2C+CO&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 13 Jan 2024 22:00:26 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '5548'
+      connection:
+      - keep-alive
+      x-ratelimit-limit-2628000:
+      - '1000000000'
+      x-ratelimit-remaining-2628000:
+      - '999999989'
+      ratelimit-limit:
+      - '1000000000'
+      ratelimit-remaining:
+      - '999999989'
+      ratelimit-reset:
+      - '388774'
+      x-powered-by:
+      - MapQuest
+      x-request-id:
+      - 285e9af0-b25f-11ee-9392-cdc181db240d
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"15ac-76Rclh9J7lMrBF/kG9s9ARB2xH0"
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"© 2024 MapQuest, Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"©
+        2024 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Del
+        Norte, CO"},"locations":[{"street":"","adminArea6":"Pinos del Norte","adminArea6Type":"Neighborhood","adminArea5":"Pasto","adminArea5Type":"City","adminArea4":"Narino","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"520002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":1.23109,"lng":-77.28707},"displayLatLng":{"lat":1.23109,"lng":-77.28707},"mapUrl":""},{"street":"","adminArea6":"Rosal
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.91356,"lng":-72.51096},"displayLatLng":{"lat":7.91356,"lng":-72.51096},"mapUrl":""},{"street":"","adminArea6":"Villa
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Popayan","adminArea5Type":"City","adminArea4":"Cauca","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"190001","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":2.47732,"lng":-76.5592},"displayLatLng":{"lat":2.47732,"lng":-76.5592},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Ibague","adminArea5Type":"City","adminArea4":"Tolima","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"730002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":4.4391,"lng":-75.2024},"displayLatLng":{"lat":4.4391,"lng":-75.2024},"mapUrl":""},{"street":"","adminArea6":"Villas
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Pasto","adminArea5Type":"City","adminArea4":"Narino","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"520004","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":1.23123,"lng":-77.2683},"displayLatLng":{"lat":1.23123,"lng":-77.2683},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Pasto","adminArea5Type":"City","adminArea4":"Narino","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"520004","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":1.23045,"lng":-77.26468},"displayLatLng":{"lat":1.23045,"lng":-77.26468},"mapUrl":""},{"street":"","adminArea6":"Brisas
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.91867,"lng":-72.50689},"displayLatLng":{"lat":7.91867,"lng":-72.50689},"mapUrl":""},{"street":"","adminArea6":"Trigal
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540001","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.94643,"lng":-72.50564},"displayLatLng":{"lat":7.94643,"lng":-72.50564},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540003","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.91772,"lng":-72.49822},"displayLatLng":{"lat":7.91772,"lng":-72.49822},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Popayan","adminArea5Type":"City","adminArea4":"Cauca","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"190002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":2.45283,"lng":-76.60107},"displayLatLng":{"lat":2.45283,"lng":-76.60107},"mapUrl":""}]}]}'
+  recorded_at: Sat, 13 Jan 2024 22:00:26 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/businesses/search?categories=mexican&latitude=1.23109&longitude=&sort_by=best_match&term=food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <YELP_API_KEY>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      connection:
+      - keep-alive
+      server:
+      - openresty/1.21.4.1
+      content-type:
+      - text/html; charset=utf-8
+      content-security-policy:
+      - script-src 'none';
+      x-zipkin-id:
+      - 84ea30db575a7aa8
+      x-routing-service:
+      - routing-main--useast1-74f644dc4b-sqkc4; site=mobile_api_v1
+      x-b3-sampled:
+      - '0'
+      x-mode:
+      - ro
+      x-proxied:
+      - 10-65-166-92-useast1bprod
+      x-extlb:
+      - 10-65-166-92-useast1bprod
+      accept-ranges:
+      - bytes
+      date:
+      - Sat, 13 Jan 2024 22:00:28 GMT
+      via:
+      - 1.1 varnish
+      x-served-by:
+      - cache-den8283-DEN
+      x-cache:
+      - MISS
+      x-cache-hits:
+      - '0'
+      alt-svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        <html>
+          <head><title>Bad Request</title></head>
+          <body>
+            <h1>400 Bad Request</h1>
+            <p>Error served by routing service running on <tt>routing-main--useast1-74f644dc4b-sqkc4</tt></p>
+          </body>
+        </html>
+  recorded_at: Sat, 13 Jan 2024 22:00:27 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<MQ_API_KEY>&location=Del%20Norte,%20CO&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 13 Jan 2024 22:00:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '5548'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '1000000000'
+      X-Ratelimit-Remaining-2628000:
+      - '999999987'
+      Ratelimit-Limit:
+      - '1000000000'
+      Ratelimit-Remaining:
+      - '999999987'
+      Ratelimit-Reset:
+      - '388757'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - 3295f630-b25f-11ee-9392-cdc181db240d
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"15ac-76Rclh9J7lMrBF/kG9s9ARB2xH0"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJEZWwgTm9ydGUsIENPIn0sImxvY2F0aW9ucyI6W3sic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IlBpbm9zIGRlbCBOb3J0ZSIsImFkbWluQXJlYTZUeXBlIjoiTmVpZ2hib3Job29kIiwiYWRtaW5BcmVhNSI6IlBhc3RvIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6Ik5hcmlubyIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IiIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJhZG1pbkFyZWExIjoiQ08iLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJwb3N0YWxDb2RlIjoiNTIwMDAyIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTZYQ1giLCJnZW9jb2RlUXVhbGl0eSI6Ik5FSUdIQk9SSE9PRCIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjoxLjIzMTA5LCJsbmciOi03Ny4yODcwN30sImRpc3BsYXlMYXRMbmciOnsibGF0IjoxLjIzMTA5LCJsbmciOi03Ny4yODcwN30sIm1hcFVybCI6IiJ9LHsic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IlJvc2FsIGRlbCBOb3J0ZSIsImFkbWluQXJlYTZUeXBlIjoiTmVpZ2hib3Job29kIiwiYWRtaW5BcmVhNSI6IkN1Y3V0YSIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImFkbWluQXJlYTQiOiJOb3J0ZSBkZSBTYW50YW5kZXIiLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImFkbWluQXJlYTMiOiIiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwiYWRtaW5BcmVhMSI6IkNPIiwiYWRtaW5BcmVhMVR5cGUiOiJDb3VudHJ5IiwicG9zdGFsQ29kZSI6IjU0MDAwMiIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE2WENYIiwiZ2VvY29kZVF1YWxpdHkiOiJORUlHSEJPUkhPT0QiLCJkcmFnUG9pbnQiOmZhbHNlLCJzaWRlT2ZTdHJlZXQiOiJOIiwibGlua0lkIjoiMCIsInVua25vd25JbnB1dCI6IiIsInR5cGUiOiJzIiwibGF0TG5nIjp7ImxhdCI6Ny45MTM1NiwibG5nIjotNzIuNTEwOTZ9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6Ny45MTM1NiwibG5nIjotNzIuNTEwOTZ9LCJtYXBVcmwiOiIifSx7InN0cmVldCI6IiIsImFkbWluQXJlYTYiOiJWaWxsYSBkZWwgTm9ydGUiLCJhZG1pbkFyZWE2VHlwZSI6Ik5laWdoYm9yaG9vZCIsImFkbWluQXJlYTUiOiJQb3BheWFuIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IkNhdWNhIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWEzIjoiIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJDTyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiIxOTAwMDEiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNlhDWCIsImdlb2NvZGVRdWFsaXR5IjoiTkVJR0hCT1JIT09EIiwiZHJhZ1BvaW50IjpmYWxzZSwic2lkZU9mU3RyZWV0IjoiTiIsImxpbmtJZCI6IjAiLCJ1bmtub3duSW5wdXQiOiIiLCJ0eXBlIjoicyIsImxhdExuZyI6eyJsYXQiOjIuNDc3MzIsImxuZyI6LTc2LjU1OTJ9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6Mi40NzczMiwibG5nIjotNzYuNTU5Mn0sIm1hcFVybCI6IiJ9LHsic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IlByYWRvcyBkZWwgTm9ydGUiLCJhZG1pbkFyZWE2VHlwZSI6Ik5laWdoYm9yaG9vZCIsImFkbWluQXJlYTUiOiJJYmFndWUiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJhZG1pbkFyZWE0IjoiVG9saW1hIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWEzIjoiIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJDTyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiI3MzAwMDIiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNlhDWCIsImdlb2NvZGVRdWFsaXR5IjoiTkVJR0hCT1JIT09EIiwiZHJhZ1BvaW50IjpmYWxzZSwic2lkZU9mU3RyZWV0IjoiTiIsImxpbmtJZCI6IjAiLCJ1bmtub3duSW5wdXQiOiIiLCJ0eXBlIjoicyIsImxhdExuZyI6eyJsYXQiOjQuNDM5MSwibG5nIjotNzUuMjAyNH0sImRpc3BsYXlMYXRMbmciOnsibGF0Ijo0LjQzOTEsImxuZyI6LTc1LjIwMjR9LCJtYXBVcmwiOiIifSx7InN0cmVldCI6IiIsImFkbWluQXJlYTYiOiJWaWxsYXMgZGVsIE5vcnRlIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiUGFzdG8iLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJhZG1pbkFyZWE0IjoiTmFyaW5vIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWEzIjoiIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJDTyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiI1MjAwMDQiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNlhDWCIsImdlb2NvZGVRdWFsaXR5IjoiTkVJR0hCT1JIT09EIiwiZHJhZ1BvaW50IjpmYWxzZSwic2lkZU9mU3RyZWV0IjoiTiIsImxpbmtJZCI6IjAiLCJ1bmtub3duSW5wdXQiOiIiLCJ0eXBlIjoicyIsImxhdExuZyI6eyJsYXQiOjEuMjMxMjMsImxuZyI6LTc3LjI2ODN9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6MS4yMzEyMywibG5nIjotNzcuMjY4M30sIm1hcFVybCI6IiJ9LHsic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IlByYWRvcyBkZWwgTm9ydGUiLCJhZG1pbkFyZWE2VHlwZSI6Ik5laWdoYm9yaG9vZCIsImFkbWluQXJlYTUiOiJQYXN0byIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImFkbWluQXJlYTQiOiJOYXJpbm8iLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImFkbWluQXJlYTMiOiIiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwiYWRtaW5BcmVhMSI6IkNPIiwiYWRtaW5BcmVhMVR5cGUiOiJDb3VudHJ5IiwicG9zdGFsQ29kZSI6IjUyMDAwNCIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE2WENYIiwiZ2VvY29kZVF1YWxpdHkiOiJORUlHSEJPUkhPT0QiLCJkcmFnUG9pbnQiOmZhbHNlLCJzaWRlT2ZTdHJlZXQiOiJOIiwibGlua0lkIjoiMCIsInVua25vd25JbnB1dCI6IiIsInR5cGUiOiJzIiwibGF0TG5nIjp7ImxhdCI6MS4yMzA0NSwibG5nIjotNzcuMjY0Njh9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6MS4yMzA0NSwibG5nIjotNzcuMjY0Njh9LCJtYXBVcmwiOiIifSx7InN0cmVldCI6IiIsImFkbWluQXJlYTYiOiJCcmlzYXMgZGVsIE5vcnRlIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiQ3VjdXRhIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6Ik5vcnRlIGRlIFNhbnRhbmRlciIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IiIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJhZG1pbkFyZWExIjoiQ08iLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJwb3N0YWxDb2RlIjoiNTQwMDAyIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTZYQ1giLCJnZW9jb2RlUXVhbGl0eSI6Ik5FSUdIQk9SSE9PRCIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0Ijo3LjkxODY3LCJsbmciOi03Mi41MDY4OX0sImRpc3BsYXlMYXRMbmciOnsibGF0Ijo3LjkxODY3LCJsbmciOi03Mi41MDY4OX0sIm1hcFVybCI6IiJ9LHsic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IlRyaWdhbCBkZWwgTm9ydGUiLCJhZG1pbkFyZWE2VHlwZSI6Ik5laWdoYm9yaG9vZCIsImFkbWluQXJlYTUiOiJDdWN1dGEiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJhZG1pbkFyZWE0IjoiTm9ydGUgZGUgU2FudGFuZGVyIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWEzIjoiIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0ZSIsImFkbWluQXJlYTEiOiJDTyIsImFkbWluQXJlYTFUeXBlIjoiQ291bnRyeSIsInBvc3RhbENvZGUiOiI1NDAwMDEiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJBNlhDWCIsImdlb2NvZGVRdWFsaXR5IjoiTkVJR0hCT1JIT09EIiwiZHJhZ1BvaW50IjpmYWxzZSwic2lkZU9mU3RyZWV0IjoiTiIsImxpbmtJZCI6IjAiLCJ1bmtub3duSW5wdXQiOiIiLCJ0eXBlIjoicyIsImxhdExuZyI6eyJsYXQiOjcuOTQ2NDMsImxuZyI6LTcyLjUwNTY0fSwiZGlzcGxheUxhdExuZyI6eyJsYXQiOjcuOTQ2NDMsImxuZyI6LTcyLjUwNTY0fSwibWFwVXJsIjoiIn0seyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiUHJhZG9zIGRlbCBOb3J0ZSIsImFkbWluQXJlYTZUeXBlIjoiTmVpZ2hib3Job29kIiwiYWRtaW5BcmVhNSI6IkN1Y3V0YSIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImFkbWluQXJlYTQiOiJOb3J0ZSBkZSBTYW50YW5kZXIiLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImFkbWluQXJlYTMiOiIiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwiYWRtaW5BcmVhMSI6IkNPIiwiYWRtaW5BcmVhMVR5cGUiOiJDb3VudHJ5IiwicG9zdGFsQ29kZSI6IjU0MDAwMyIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE2WENYIiwiZ2VvY29kZVF1YWxpdHkiOiJORUlHSEJPUkhPT0QiLCJkcmFnUG9pbnQiOmZhbHNlLCJzaWRlT2ZTdHJlZXQiOiJOIiwibGlua0lkIjoiMCIsInVua25vd25JbnB1dCI6IiIsInR5cGUiOiJzIiwibGF0TG5nIjp7ImxhdCI6Ny45MTc3MiwibG5nIjotNzIuNDk4MjJ9LCJkaXNwbGF5TGF0TG5nIjp7ImxhdCI6Ny45MTc3MiwibG5nIjotNzIuNDk4MjJ9LCJtYXBVcmwiOiIifSx7InN0cmVldCI6IiIsImFkbWluQXJlYTYiOiJQcmFkb3MgZGVsIE5vcnRlIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiUG9wYXlhbiIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImFkbWluQXJlYTQiOiJDYXVjYSIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhMyI6IiIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJhZG1pbkFyZWExIjoiQ08iLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJwb3N0YWxDb2RlIjoiMTkwMDAyIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTZYQ1giLCJnZW9jb2RlUXVhbGl0eSI6Ik5FSUdIQk9SSE9PRCIsImRyYWdQb2ludCI6ZmFsc2UsInNpZGVPZlN0cmVldCI6Ik4iLCJsaW5rSWQiOiIwIiwidW5rbm93bklucHV0IjoiIiwidHlwZSI6InMiLCJsYXRMbmciOnsibGF0IjoyLjQ1MjgzLCJsbmciOi03Ni42MDEwN30sImRpc3BsYXlMYXRMbmciOnsibGF0IjoyLjQ1MjgzLCJsbmciOi03Ni42MDEwN30sIm1hcFVybCI6IiJ9XX1dfQ==
+  recorded_at: Sat, 13 Jan 2024 22:00:43 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<MQ_API_KEY>&location=Del%20Norte,%20CO,%20USA&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 13 Jan 2024 22:12:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '813'
+      Connection:
+      - keep-alive
+      X-Ratelimit-Limit-2628000:
+      - '1000000000'
+      X-Ratelimit-Remaining-2628000:
+      - '999999986'
+      Ratelimit-Limit:
+      - '1000000000'
+      Ratelimit-Remaining:
+      - '999999986'
+      Ratelimit-Reset:
+      - '388058'
+      X-Powered-By:
+      - MapQuest
+      X-Request-Id:
+      - d356cdf0-b260-11ee-a1f9-3940980a923d
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"32d-QUEU8X0D20uqBnVGws8ReahWavM"
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJEZWwgTm9ydGUsIENPLCBVU0EifSwibG9jYXRpb25zIjpbeyJzdHJlZXQiOiIiLCJhZG1pbkFyZWE2IjoiIiwiYWRtaW5BcmVhNlR5cGUiOiJOZWlnaGJvcmhvb2QiLCJhZG1pbkFyZWE1IjoiRGVsIE5vcnRlIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5IiwiYWRtaW5BcmVhNCI6IlJpbyBHcmFuZGUiLCJhZG1pbkFyZWE0VHlwZSI6IkNvdW50eSIsImFkbWluQXJlYTMiOiJDTyIsImFkbWluQXJlYTNUeXBlIjoiU3RhdGUiLCJhZG1pbkFyZWExIjoiVVMiLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJwb3N0YWxDb2RlIjoiIiwiZ2VvY29kZVF1YWxpdHlDb2RlIjoiQTVYQVgiLCJnZW9jb2RlUXVhbGl0eSI6IkNJVFkiLCJkcmFnUG9pbnQiOmZhbHNlLCJzaWRlT2ZTdHJlZXQiOiJOIiwibGlua0lkIjoiMCIsInVua25vd25JbnB1dCI6IiIsInR5cGUiOiJzIiwibGF0TG5nIjp7ImxhdCI6MzcuNjc4NzMsImxuZyI6LTEwNi4zNTMwNn0sImRpc3BsYXlMYXRMbmciOnsibGF0IjozNy42Nzg3MywibG5nIjotMTA2LjM1MzA2fSwibWFwVXJsIjoiIn1dfV19
+  recorded_at: Sat, 13 Jan 2024 22:12:22 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/businesses/search?categories=mexican&latitude=37.67873&longitude=&sort_by=best_match&term=food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <YELP_API_KEY>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Connection:
+      - keep-alive
+      Server:
+      - openresty/1.21.4.1
+      Content-Type:
+      - text/html; charset=utf-8
+      X-B3-Sampled:
+      - '0'
+      X-Routing-Service:
+      - routing-main--useast1-74f644dc4b-nmrk2; site=mobile_api_v1
+      Content-Security-Policy:
+      - script-src 'none';
+      X-Zipkin-Id:
+      - cb8f0762d9097b93
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-65-172-176-useast1bprod
+      X-Extlb:
+      - 10-65-172-176-useast1bprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 13 Jan 2024 22:12:23 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8264-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        <html>
+          <head><title>Bad Request</title></head>
+          <body>
+            <h1>400 Bad Request</h1>
+            <p>Error served by routing service running on <tt>routing-main--useast1-74f644dc4b-nmrk2</tt></p>
+          </body>
+        </html>
+  recorded_at: Sat, 13 Jan 2024 22:12:23 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=mexican&latitude=37.67873&longitude=&sort_by=best_match&term=food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <YELP_API_KEY>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json
+      X-Routing-Service:
+      - routing-main--useast1-74f644dc4b-pzb8x; site=public_api_v3
+      X-Zipkin-Id:
+      - 404fb122aef942a2
+      X-B3-Sampled:
+      - '0'
+      Server:
+      - envoy
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-65-113-124-useast1aprod
+      X-Extlb:
+      - 10-65-113-124-useast1aprod
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 13 Jan 2024 22:15:12 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8256-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"error": {"code": "VALIDATION_ERROR", "description": "Please specify
+        a location or a latitude and longitude"}}'
+  recorded_at: Sat, 13 Jan 2024 22:15:12 GMT
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=mexican&latitude=37.67873&longitude=-106.35306&sort_by=best_match&term=food
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer <YELP_API_KEY>
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Ratelimit-Dailylimit:
+      - '500.0'
+      X-Routing-Service:
+      - routing-main--useast1-74f644dc4b-hpzb2; site=public_api_v3
+      Ratelimit-Remaining:
+      - '495.0'
+      Ratelimit-Resettime:
+      - '2024-01-14T00:00:00+00:00'
+      X-Zipkin-Id:
+      - cbbfb6190dffdf3f
+      Server:
+      - envoy
+      X-B3-Sampled:
+      - '0'
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-65-92-52-useast1aprod
+      X-Extlb:
+      - 10-65-92-52-useast1aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 13 Jan 2024 22:20:53 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8224-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "atuodq70t4bSHLqdz7w_Iw", "alias": "chavalos-mexican-restaurant-del-norte",
+        "name": "Chavalos Mexican Restaurant", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/GtxpVI0331f04aExNONQFg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/chavalos-mexican-restaurant-del-norte?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 43, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "seafood", "title": "Seafood"}, {"alias": "breakfast_brunch", "title":
+        "Breakfast & Brunch"}], "rating": 4.5, "coordinates": {"latitude": 37.6790710753301,
+        "longitude": -106.35501186236093}, "transactions": [], "location": {"address1":
+        "582 Grand Ave", "address2": "", "address3": null, "city": "Del Norte", "zip_code":
+        "81132", "country": "US", "state": "CO", "display_address": ["582 Grand Ave",
+        "Del Norte, CO 81132"]}, "phone": "+17196579038", "display_phone": "(719)
+        657-9038", "distance": 175.91059958498371}, {"id": "lnK6jmTZfffQLAgcTgPujw",
+        "alias": "don-tomas-bakery-monte-vista-2", "name": "Don Tomas Bakery", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/ITBmkvw880UMV9MZzVmOkQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/don-tomas-bakery-monte-vista-2?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 38, "categories": [{"alias": "breakfast_brunch", "title":
+        "Breakfast & Brunch"}, {"alias": "mexican", "title": "Mexican"}, {"alias":
+        "bakeries", "title": "Bakeries"}], "rating": 4.5, "coordinates": {"latitude":
+        37.5806453943384, "longitude": -106.147354245186}, "transactions": [], "price":
+        "$", "location": {"address1": "829 1st Ave", "address2": "", "address3": "",
+        "city": "Monte Vista", "zip_code": "81144", "country": "US", "state": "CO",
+        "display_address": ["829 1st Ave", "Monte Vista, CO 81144"]}, "phone": "+17198520981",
+        "display_phone": "(719) 852-0981", "distance": 21144.961376273837}, {"id":
+        "WBc-MMP-fXuGza_b4a-DVw", "alias": "baldos-mexican-monte-vista", "name": "Baldo''s
+        Mexican", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/N_1xAImIM4WOcP1InFq6GQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/baldos-mexican-monte-vista?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 45, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 37.5797691345215, "longitude":
+        -106.143920898438}, "transactions": [], "price": "$$", "location": {"address1":
+        "1100 Park Ave", "address2": "", "address3": "", "city": "Monte Vista", "zip_code":
+        "81144", "country": "US", "state": "CO", "display_address": ["1100 Park Ave",
+        "Monte Vista, CO 81144"]}, "phone": "+17198520222", "display_phone": "(719)
+        852-0222", "distance": 21454.46183359648}, {"id": "WG9Om4hY4OnPNP82DO5LJQ",
+        "alias": "taqueria-y-antojitos-los-lopez-monte-vista", "name": "Taqueria Y
+        Antojitos Los Lopez", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/GTvwYNKSOSO7ERsK_a2Z9g/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/taqueria-y-antojitos-los-lopez-monte-vista?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 30, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 37.5798606513547, "longitude":
+        -106.144303874342}, "transactions": [], "location": {"address1": "1042 Park
+        Ave", "address2": "", "address3": null, "city": "Monte Vista", "zip_code":
+        "81144", "country": "US", "state": "CO", "display_address": ["1042 Park Ave",
+        "Monte Vista, CO 81144"]}, "phone": "+17196282724", "display_phone": "(719)
+        628-2724", "distance": 21420.282156905258}, {"id": "tkXBXhnoyeCM-vUdhuiPnw",
+        "alias": "fernandez-taqueria-monte-vista", "name": "Fernandez Taqueria", "image_url":
+        "https://s3-media3.fl.yelpcdn.com/bphoto/5BRuwBNPNJ6bLRKv6yTzcQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/fernandez-taqueria-monte-vista?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 8, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 37.580039, "longitude": -106.141357},
+        "transactions": [], "price": "$", "location": {"address1": "159 Euclid St",
+        "address2": "", "address3": "", "city": "Monte Vista", "zip_code": "81144",
+        "country": "US", "state": "CO", "display_address": ["159 Euclid St", "Monte
+        Vista, CO 81144"]}, "phone": "+17198524956", "display_phone": "(719) 852-4956",
+        "distance": 21626.557533636562}, {"id": "txRoH9Ijlk4u4cwojta-TQ", "alias":
+        "el-azteca-de-oro-restaurant-center", "name": "El Azteca De Oro Restaurant",
+        "image_url": "", "is_closed": false, "url": "https://www.yelp.com/biz/el-azteca-de-oro-restaurant-center?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 8, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.5, "coordinates": {"latitude": 37.745626, "longitude": -106.111535},
+        "transactions": [], "price": "$$", "location": {"address1": "980 S Broadway",
+        "address2": null, "address3": null, "city": "Center", "zip_code": "81125",
+        "country": "US", "state": "CO", "display_address": ["980 S Broadway", "Center,
+        CO 81125"]}, "phone": "+17197542655", "display_phone": "(719) 754-2655", "distance":
+        22510.38616473395}, {"id": "9s67epAzjhpCE0bOKSNDrQ", "alias": "ramons-mexican-restaurant-south-fork",
+        "name": "Ramons Mexican Restaurant", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/u6aR6xUFlBH39lGXW5GpFg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ramons-mexican-restaurant-south-fork?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 194, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 4.0, "coordinates": {"latitude": 37.6582951652117, "longitude":
+        -106.651311539271}, "transactions": [], "price": "$$", "location": {"address1":
+        "31519 Hwy 160", "address2": "", "address3": "", "city": "South Fork", "zip_code":
+        "81154", "country": "US", "state": "CO", "display_address": ["31519 Hwy 160",
+        "South Fork, CO 81154"]}, "phone": "+17198730231", "display_phone": "(719)
+        873-0231", "distance": 26349.440683724846}, {"id": "d6_JAfCwtU7L5ItbrR8raA",
+        "alias": "leornados-restaurante-center", "name": "Leornado''s Restaurante",
+        "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/WYRAgca4BTfn9mcCM1bPVA/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/leornados-restaurante-center?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 12, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "salad", "title": "Salad"}], "rating": 4.5, "coordinates": {"latitude":
+        37.747999, "longitude": -106.11152535823068}, "transactions": [], "price":
+        "$", "location": {"address1": "120 W State Hwy 112", "address2": null, "address3":
+        null, "city": "Center", "zip_code": "81125", "country": "US", "state": "CO",
+        "display_address": ["120 W State Hwy 112", "Center, CO 81125"]}, "phone":
+        "+17197543113", "display_phone": "(719) 754-3113", "distance": 22599.429194284356},
+        {"id": "34Xq3ypIXIy0Dvi3_eba7Q", "alias": "los-chavalos-south-fork", "name":
+        "Los Chavalos", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/Sp2iGLosQNq9G62zWJ30QQ/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/los-chavalos-south-fork?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 15, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "wine_bars", "title": "Wine Bars"}, {"alias": "burgers", "title":
+        "Burgers"}], "rating": 4.0, "coordinates": {"latitude": 37.66989100417849,
+        "longitude": -106.6394666752363}, "transactions": [], "location": {"address1":
+        "30333 Hwy 160", "address2": "", "address3": null, "city": "South Fork", "zip_code":
+        "81154", "country": "US", "state": "CO", "display_address": ["30333 Hwy 160",
+        "South Fork, CO 81154"]}, "phone": "+17196571332", "display_phone": "(719)
+        657-1332", "distance": 25225.917363129513}, {"id": "lZutxb1zQ2F1r-veQushqA",
+        "alias": "ninos-monte-vista", "name": "Nino''s", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/TDM7pn6GKSdc87M2oOtY_A/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/ninos-monte-vista?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 39, "categories": [{"alias": "mexican", "title": "Mexican"}],
+        "rating": 3.5, "coordinates": {"latitude": 37.58012, "longitude": -106.14634},
+        "transactions": [], "price": "$$", "location": {"address1": "118 Adams St",
+        "address2": "", "address3": "", "city": "Monte Vista", "zip_code": "81144",
+        "country": "US", "state": "CO", "display_address": ["118 Adams St", "Monte
+        Vista, CO 81144"]}, "phone": "+17198520101", "display_phone": "(719) 852-0101",
+        "distance": 21251.371301134626}, {"id": "bqNgpgX9iqyMy3wCGplFmg", "alias":
+        "dos-rios-monte-vista", "name": "DOS Rios", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/ZYDpwmxXrPKsBi6OHu7Pgg/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/dos-rios-monte-vista?adjust_creative=osaivcfHxkdAPvV4VF0Xzw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=osaivcfHxkdAPvV4VF0Xzw",
+        "review_count": 23, "categories": [{"alias": "mexican", "title": "Mexican"},
+        {"alias": "buffets", "title": "Buffets"}], "rating": 3.5, "coordinates": {"latitude":
+        37.59859343717427, "longitude": -106.1497588411496}, "transactions": [], "price":
+        "$$", "location": {"address1": "1635 US Hwy 285 N", "address2": "", "address3":
+        "", "city": "Monte Vista", "zip_code": "81144", "country": "US", "state":
+        "CO", "display_address": ["1635 US Hwy 285 N", "Monte Vista, CO 81144"]},
+        "phone": "+17198520545", "display_phone": "(719) 852-0545", "distance": 19996.374826175535}],
+        "total": 11, "region": {"center": {"longitude": -106.35306, "latitude": 37.67873}}}'
+  recorded_at: Sat, 13 Jan 2024 22:20:54 GMT
+recorded_with: VCR 6.2.0

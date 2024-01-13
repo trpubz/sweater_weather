@@ -69,7 +69,12 @@ end
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
+  config.default_cassette_options = {
+    match_requests_on: [:method, :uri, :path],
+    record: :new_episodes
+  }
   config.filter_sensitive_data("<MQ_API_KEY>") { Rails.application.credentials.mapquest_key }
   config.filter_sensitive_data("<WEATHER_API_KEY>") { Rails.application.credentials.weather_key }
+  config.filter_sensitive_data("<YELP_API_KEY>") { Rails.application.credentials.yelp_api_key }
   config.configure_rspec_metadata!
 end

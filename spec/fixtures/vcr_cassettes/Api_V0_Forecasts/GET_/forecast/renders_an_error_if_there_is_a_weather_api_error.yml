@@ -318,4 +318,63 @@ http_interactions:
         possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png","code":1063},"wind_mph":6.7,"wind_kph":10.8,"wind_degree":144,"wind_dir":"SE","pressure_mb":1019.0,"pressure_in":30.08,"precip_mm":0.02,"precip_in":0.0,"snow_cm":0.0,"humidity":93,"cloud":82,"feelslike_c":8.4,"feelslike_f":47.0,"windchill_c":8.4,"windchill_f":47.0,"heatindex_c":9.9,"heatindex_f":49.8,"dewpoint_c":8.7,"dewpoint_f":47.7,"will_it_rain":1,"chance_of_rain":89,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":13.3,"gust_kph":21.3,"uv":1.0},{"time_epoch":1705550400,"time":"2024-01-17
         23:00","temp_c":9.8,"temp_f":49.6,"is_day":0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png","code":1003},"wind_mph":6.9,"wind_kph":11.2,"wind_degree":146,"wind_dir":"SSE","pressure_mb":1019.0,"pressure_in":30.08,"precip_mm":0.0,"precip_in":0.0,"snow_cm":0.0,"humidity":92,"cloud":36,"feelslike_c":8.2,"feelslike_f":46.7,"windchill_c":8.2,"windchill_f":46.7,"heatindex_c":9.8,"heatindex_f":49.6,"dewpoint_c":8.5,"dewpoint_f":47.3,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":13.7,"gust_kph":22.0,"uv":1.0}]}]}}'
   recorded_at: Sat, 13 Jan 2024 20:34:46 GMT
+- request:
+    method: get
+    uri: https://www.mapquestapi.com/geocoding/v1/address?key=<MQ_API_KEY>&location=Del+Norte%2C+CO&outFormat=json&thumbMaps=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 13 Jan 2024 22:00:24 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '5548'
+      connection:
+      - keep-alive
+      x-ratelimit-limit-2628000:
+      - '1000000000'
+      x-ratelimit-remaining-2628000:
+      - '999999992'
+      ratelimit-limit:
+      - '1000000000'
+      ratelimit-remaining:
+      - '999999992'
+      ratelimit-reset:
+      - '388776'
+      x-powered-by:
+      - MapQuest
+      x-request-id:
+      - 275ede30-b25f-11ee-9392-cdc181db240d
+      access-control-allow-origin:
+      - "*"
+      etag:
+      - W/"15ac-76Rclh9J7lMrBF/kG9s9ARB2xH0"
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"© 2024 MapQuest, Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"©
+        2024 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"Del
+        Norte, CO"},"locations":[{"street":"","adminArea6":"Pinos del Norte","adminArea6Type":"Neighborhood","adminArea5":"Pasto","adminArea5Type":"City","adminArea4":"Narino","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"520002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":1.23109,"lng":-77.28707},"displayLatLng":{"lat":1.23109,"lng":-77.28707},"mapUrl":""},{"street":"","adminArea6":"Rosal
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.91356,"lng":-72.51096},"displayLatLng":{"lat":7.91356,"lng":-72.51096},"mapUrl":""},{"street":"","adminArea6":"Villa
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Popayan","adminArea5Type":"City","adminArea4":"Cauca","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"190001","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":2.47732,"lng":-76.5592},"displayLatLng":{"lat":2.47732,"lng":-76.5592},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Ibague","adminArea5Type":"City","adminArea4":"Tolima","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"730002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":4.4391,"lng":-75.2024},"displayLatLng":{"lat":4.4391,"lng":-75.2024},"mapUrl":""},{"street":"","adminArea6":"Villas
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Pasto","adminArea5Type":"City","adminArea4":"Narino","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"520004","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":1.23123,"lng":-77.2683},"displayLatLng":{"lat":1.23123,"lng":-77.2683},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Pasto","adminArea5Type":"City","adminArea4":"Narino","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"520004","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":1.23045,"lng":-77.26468},"displayLatLng":{"lat":1.23045,"lng":-77.26468},"mapUrl":""},{"street":"","adminArea6":"Brisas
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.91867,"lng":-72.50689},"displayLatLng":{"lat":7.91867,"lng":-72.50689},"mapUrl":""},{"street":"","adminArea6":"Trigal
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540001","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.94643,"lng":-72.50564},"displayLatLng":{"lat":7.94643,"lng":-72.50564},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Cucuta","adminArea5Type":"City","adminArea4":"Norte
+        de Santander","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"540003","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":7.91772,"lng":-72.49822},"displayLatLng":{"lat":7.91772,"lng":-72.49822},"mapUrl":""},{"street":"","adminArea6":"Prados
+        del Norte","adminArea6Type":"Neighborhood","adminArea5":"Popayan","adminArea5Type":"City","adminArea4":"Cauca","adminArea4Type":"County","adminArea3":"","adminArea3Type":"State","adminArea1":"CO","adminArea1Type":"Country","postalCode":"190002","geocodeQualityCode":"A6XCX","geocodeQuality":"NEIGHBORHOOD","dragPoint":false,"sideOfStreet":"N","linkId":"0","unknownInput":"","type":"s","latLng":{"lat":2.45283,"lng":-76.60107},"displayLatLng":{"lat":2.45283,"lng":-76.60107},"mapUrl":""}]}]}'
+  recorded_at: Sat, 13 Jan 2024 22:00:24 GMT
 recorded_with: VCR 6.2.0

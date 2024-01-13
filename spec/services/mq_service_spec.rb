@@ -10,7 +10,7 @@ RSpec.describe MqService do
 
     describe "::get_lat_lon" do
       it "returns a lat and lon", :vcr do
-        response = MqService.get_lat_lon("Del Norte, CO")
+        response = MqService.get_lat_lng("Del Norte, CO")
 
         expect(response).to be_a(Hash)
         expect(response[:status]).to eq(200)
