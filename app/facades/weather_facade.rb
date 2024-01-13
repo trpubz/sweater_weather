@@ -39,7 +39,7 @@ class WeatherFacade
         end
       }
     else
-      raise Faraday::BadRequestError, "Mapquest API error: #{response[:status]}"
+      raise Faraday::BadRequestError, "Weather API error: #{response[:status]}, #{response[:data][:error][:message]}"
     end
   end
 end
