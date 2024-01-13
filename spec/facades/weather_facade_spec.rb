@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe WeatherFacade do
   describe "#get_weather" do
-    it "should return a weather object matching requirements", :vcr do
+    it "returns a weather object matching requirements", :vcr do
       # a data attribute, under which all other attributes are present:
       # id, always set to null
       # type, always set to “forecast”
@@ -57,6 +57,22 @@ describe WeatherFacade do
       expect(results[:current_weather]).to_not have_key(:temp_c)
       expect(results[:current_weather]).to_not have_key(:cloud)
       expect(results[:current_weather]).to_not have_key(:wind_mph)
+    end
+
+    it "raises an error if the status is bad", :vcr do
+      allow(WeatherService).to receive(:get_forecast).and_return(
+        {
+          status: 403,
+          data: {
+            error: {
+              code: 2008,
+              message: "API key is missing or invalid."
+            }
+          }
+        }
+      )
+
+      expect { WeatherFacade.get_weather(37.67537, -106.35347) }.to raise_error(Faraday::BadRequestError)
     end
   end
 end

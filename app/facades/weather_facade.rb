@@ -6,7 +6,8 @@ class WeatherFacade
       data = response[:data]
       current_weather = data[:current]
       forecast = data[:forecast]
-      return {
+
+      {
         current_weather: {
           last_updated: current_weather[:last_updated],
           temperature: current_weather[:temp_f],
@@ -37,6 +38,8 @@ class WeatherFacade
           }
         end
       }
+    else
+      raise Faraday::BadRequestError, "Mapquest API error: #{response[:status]}"
     end
   end
 end
