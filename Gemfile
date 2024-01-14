@@ -11,7 +11,6 @@ gem "rails", "~> 7.1.2"
 # use mongodb
 gem "mongoid", "~> 8.1", ">= 8.1.4"
 
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -56,6 +55,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "orderly"
+  gem "shoulda-matchers"
 end
 
 group :development do

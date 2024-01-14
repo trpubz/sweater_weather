@@ -6,7 +6,7 @@ class MunchiesFacade
 
     if results[:status] == 200 && !lat_lng.nil? && !current_weather.nil?
       best = results[:data][:businesses].first
-      return {
+      {
         destination_city: "#{best[:location][:city]}, #{best[:location][:state]}",
         forecast: {
           summary: current_weather[:condition],
