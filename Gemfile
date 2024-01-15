@@ -55,7 +55,8 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "orderly"
-  gem "shoulda-matchers"
+  gem "mongoid-rspec"
+  gem "database_cleaner-mongoid"
 end
 
 group :development do

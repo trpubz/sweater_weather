@@ -10,11 +10,12 @@ Your team is working in a service-oriented architecture. The front-end will comm
 
 * Configuration
 
-`rails new <NAME> --api --database=postgresql`
+to use `mongoid`<br>
+`rails new <NAME> --api --skip-active-record --skip-bundle`
 
 * Database creation/initialization
 
-`rails db:{delete,create,migrate,seed}`
+`rails g mongoid:config`
 
 * How to run the test suite
 
