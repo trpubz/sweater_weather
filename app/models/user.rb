@@ -18,6 +18,13 @@ class User
   validates :password_digest, presence: true
   validates :api_key, uniqueness: true, allow_blank: true
 
+  def self.authenticate(email, password)
+    user = User.find_by!(email: email)
+
+    return user if user && BCrypt::Password.new(user.password_digest) == password
+    nil
+  end
+
   private
 
   def gen_api_key
@@ -31,12 +38,5 @@ class User
     if password == password_confirmation && password.present?
       self.password_digest = BCrypt::Password.create(password)
     end
-  end
-
-  def authenticate(email, password)
-    user = User.find_by(email: email)
-
-    return user if user && BCrypt::Password.new(user.password_digest) == password
-    nil
   end
 end

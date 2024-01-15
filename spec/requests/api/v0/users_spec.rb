@@ -3,8 +3,7 @@ require "rails_helper"
 RSpec.describe "Api::V0::Users", type: :request do
   # This should return the minimal set of values that should be in the headers
   # in order to pass any filters (e.g. authentication) defined in
-  # UsersController, or in your router and rack
-  # middleware. Be sure to keep this updated too.
+  # UsersController, or in your router and rack middleware
   let(:valid_headers) {
     {
       "Conentent-Type" => "application/json",

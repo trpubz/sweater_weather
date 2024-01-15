@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   post "/api/v0/users" => "api/v0/users#create"
+  post "/api/v0/sessions" => "api/v0/sessions#create"
   get "/api/v0/forecast" => "api/v0/forecast#search"
   get "/api/v1/munchies" => "api/v1/munchies#search"
 end

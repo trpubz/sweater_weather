@@ -55,4 +55,24 @@ RSpec.describe User, type: :model do
       expect(user2).to_not be_valid
     end
   end
+
+  describe "#authenticate" do
+    before :each do
+      DatabaseCleaner.clean
+
+      @user = create(:user)
+    end
+    it "returns the user if the password is correct" do
+      expect(User.authenticate(@user.email, "test")).to eq @user
+    end
+
+    it "returns nil if the password is incorrect" do
+      expect(User.authenticate(@user.email, "wrong")).to be_nil
+    end
+
+    it "raises an error if the email is not found" do
+      expect { User.authenticate("<EMAIL>", "test") }
+        .to raise_error(Mongoid::Errors::DocumentNotFound)
+    end
+  end
 end
