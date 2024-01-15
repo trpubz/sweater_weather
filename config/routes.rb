@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post "/api/v0/sessions" => "api/v0/sessions#create"
   get "/api/v0/forecast" => "api/v0/forecast#search"
   get "/api/v1/munchies" => "api/v1/munchies#search"
+
+  post "/api/v0/road_trip" => "api/v0/road_trip#create"
 end

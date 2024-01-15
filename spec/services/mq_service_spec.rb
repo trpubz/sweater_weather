@@ -18,6 +18,27 @@ RSpec.describe MqService do
         expect(response[:data][:results].first[:locations].first[:latLng]).to be_a(Hash)
       end
     end
+
+    describe "::get_directions" do
+      it "returns a directions", :vcr do
+        response = MqService.get_directions("Del Norte, CO, USA", "Monte Vista, CO")
+        expect(response).to be_a(Hash)
+        expect(response[:status]).to eq(200)
+        data = response[:data]
+        expect(data).to be_a(Hash)
+        expect(data[:route][:time]).to be_a(Integer)
+        expect(data[:route][:locations]).to be_a(Array)
+        expect(data[:route][:locations].count).to eq(2)
+        expect(data[:route][:locations].first).to be_a(Hash)
+        expect(data[:route][:locations].last).to be_a(Hash)
+      end
+
+      it "returns an error if directirons are not found", :vcr do
+        response = MqService.get_directions("Del Norte, CO, USA", "Tromso, Norway")
+        expect(response).to be_a(Hash)
+        expect(response[:status]).to eq(402)
+      end
+    end
   end
 
   describe "::response_conversion" do
