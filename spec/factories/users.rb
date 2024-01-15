@@ -1,7 +1,9 @@
+require "faker"
+
 FactoryBot.define do
   factory :user do
-    email { "MyString" }
-    password { "MyString" }
-    api_key { "MyString" }
+    email { Faker::Internet.email }
+    password { "test" }
+    password_confirmation { "test" }
   end
 end
