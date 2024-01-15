@@ -14,6 +14,7 @@ class User
   field :api_key, type: String
   # validations
   validates :email, presence: true, uniqueness: true
+  validates :password, confirmation: true, presence: true
   validates :password_digest, presence: true
   validates :api_key, uniqueness: true, allow_blank: true
 
@@ -27,7 +28,9 @@ class User
   end
 
   def encrypt_password
-    self.password_digest = BCrypt::Password.create(password)
+    if password == password_confirmation && password.present?
+      self.password_digest = BCrypt::Password.create(password)
+    end
   end
 
   def authenticate(email, password)

@@ -40,6 +40,19 @@ RSpec.describe User, type: :model do
         expect(user.password_digest).to_not be_nil
         expect(BCrypt::Password.new(user.password_digest)).to eq "test"
       end
+
+      it "raises an error if password is not present" do
+        user = User.new(email: "<EMAIL>", password: nil)
+        expect { user.save! }.to raise_error(Mongoid::Errors::Validations)
+      end
+    end
+  end
+
+  describe "email uniqueness" do
+    it "should be unique" do
+      user = create(:user)
+      user2 = User.new(email: user.email)
+      expect(user2).to_not be_valid
     end
   end
 end
