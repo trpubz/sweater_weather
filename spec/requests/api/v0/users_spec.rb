@@ -49,7 +49,7 @@ RSpec.describe "Api::V0::Users", type: :request do
     context "with invalid parameters" do
       before :each do
         DatabaseCleaner.clean
-
+        # passwords don't match
         @body = {
           email: "whatever@example.com",
           password: "password",
@@ -69,6 +69,22 @@ RSpec.describe "Api::V0::Users", type: :request do
           headers: valid_headers, params: @body, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to match(a_string_including("application/json"))
+      end
+
+      it "renders an error if the email is taken" do
+        user = create :user
+        body = {
+          email: user.email,
+          password: "password",
+          password_confirmation: "password"
+        }
+
+        post api_v0_users_path,
+          headers: valid_headers, params: body, as: :json
+
+        expect(response).to have_http_status(:unprocessable_entity)
+        message = JSON.parse(response.body, symbolize_names: true)[:error]
+        expect(message).to include("Email")
       end
     end
   end
