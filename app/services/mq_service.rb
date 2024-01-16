@@ -31,7 +31,7 @@ class MqService < TrdPartyServices
       if data[:info][:statuscode] != 0  # anything other than 0 is an error
         status = data[:info][:statuscode]
         data = data[:info][:messages]
-        return {status: status, data: data}
+        return {status: status, data: {messages: data}}
       end
     end
 
