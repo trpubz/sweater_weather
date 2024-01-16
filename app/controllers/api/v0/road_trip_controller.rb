@@ -4,6 +4,13 @@ class Api::V0::RoadTripController < ApplicationController
     RoadTripFacade.validate_api_key(road_trip_params[:api_key])
 
     road_trip = RoadTripFacade.create_road_trip(road_trip_params[:origin], road_trip_params[:destination])
+    render json: {
+      data: {
+        id: nil,
+        type: "road_trip",
+        attributes: road_trip
+      }
+    }.to_json, status: :created
   end
 
   private

@@ -7,7 +7,7 @@ class Api::V0::ForecastController < ApplicationController
 
     lat_lon = MqFacade.get_lat_lng(params[:location])
     # use lat_lon to get weather
-    forecast = WeatherFacade.get_weather(lat_lon[:lat], lat_lon[:lng])
+    forecast = WeatherFacade.get_weather(lat_lon[:lat], lat_lon[:lng], 5)
 
     render json:
        {

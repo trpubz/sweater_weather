@@ -34,6 +34,14 @@ RSpec.describe MqService do
         expect(data[:route][:locations].last).to be_a(Hash)
       end
 
+      it "returns good directions for NY to LA", :vcr do
+        response = MqService.get_directions("New York City, NY", "Los Angeles, CA")
+        expect(response).to be_a(Hash)
+        expect(response[:status]).to eq(200)
+        data = response[:data]
+        expect(data).to be_a(Hash)
+      end
+
       it "returns an error if directions are not found", :vcr do
         response = MqService.get_directions("Del Norte, CO, USA", "Tromso, Norway")
         expect(response).to be_a(Hash)

@@ -29,7 +29,7 @@ describe WeatherFacade do
       # temperature, floating point number indicating the temperature in Fahrenheit for that hour
       # conditions, the text description for the weather condition at that hour
       # icon, string, png string for weather condition at that hour
-      results = WeatherFacade.get_weather(37.67537, -106.35347)
+      results = WeatherFacade.get_weather(37.67537, -106.35347, 5)
 
       expect(results).to be_a(Hash)
       expect(results).to have_key(:current_weather)
@@ -42,7 +42,7 @@ describe WeatherFacade do
       expect(results[:current_weather]).to have_key(:temperature)
       expect(results[:current_weather]).to have_key(:feels_like)
       expect(results[:daily_weather].count).to eq(5)
-      expect(results[:hourly_weather].count).to eq(24)
+      expect(results[:hourly_weather].count).to eq(120)
       expect(results[:daily_weather].first).to be_a(Hash)
       expect(results[:daily_weather].first).to have_key(:date)
       expect(results[:daily_weather].first).to have_key(:sunrise)
@@ -72,7 +72,7 @@ describe WeatherFacade do
         }
       )
 
-      expect { WeatherFacade.get_weather(37.67537, -106.35347) }.to raise_error(Faraday::BadRequestError)
+      expect { WeatherFacade.get_weather(37.67537, -106.35347, 5) }.to raise_error(Faraday::BadRequestError)
     end
   end
 end

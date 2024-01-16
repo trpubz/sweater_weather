@@ -14,8 +14,10 @@ RSpec.describe RoadTripFacade do
     end
   end
   describe "::create_road_trip" do
-    it "creates a road trip" do
-
+    it "creates a road trip", vcr: {record: :new_episodes} do
+      details = RoadTripFacade.create_road_trip("Del Norte, CO, USA", "Monte Vista, CO")
+      expect(details).to be_a(Hash)
+      expect(details.keys).to include(:start_city, :end_city, :travel_time, :weather_at_eta)
     end
   end
 end

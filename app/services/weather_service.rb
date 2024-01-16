@@ -1,10 +1,10 @@
 class WeatherService < TrdPartyServices
-  def self.get_forecast(lat, lon)
+  def self.get_forecast(lat, lon, days)
     response = conn.get("forecast.json") do |req|
       req.params.merge!(
         {
           "q" => "#{lat},#{lon}",
-          "days" => 5
+          "days" => days
         }
       )
     end

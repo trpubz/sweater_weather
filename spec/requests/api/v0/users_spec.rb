@@ -6,7 +6,7 @@ RSpec.describe "Api::V0::Users", type: :request do
   # UsersController, or in your router and rack middleware
   let(:valid_headers) {
     {
-      "Conentent-Type" => "application/json",
+      "Content-Type" => "application/json",
       "Accept" => "application/json"
     }
   }

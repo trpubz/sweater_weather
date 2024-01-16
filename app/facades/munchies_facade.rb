@@ -1,7 +1,7 @@
 class MunchiesFacade
   def self.get_business(cuisine:, location:)
     lat_lng = MqFacade.get_lat_lng(location)  # {lat: Float, lng: Float}
-    current_weather = WeatherFacade.get_weather(lat_lng[:lat], lat_lng[:lng])[:current_weather]
+    current_weather = WeatherFacade.get_weather(lat_lng[:lat], lat_lng[:lng], 1)[:current_weather]
     results = YelpApiService.get_businesses(cuisine: cuisine, lat: lat_lng[:lat], lng: lat_lng[:lng])
 
     if results[:status] == 200 && !lat_lng.nil? && !current_weather.nil?

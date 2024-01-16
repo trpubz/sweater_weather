@@ -1,6 +1,6 @@
 class WeatherFacade
-  def self.get_weather(lat, lon)
-    response = WeatherService.get_forecast(lat, lon)
+  def self.get_weather(lat, lon, days)
+    response = WeatherService.get_forecast(lat, lon, days)
 
     if response[:status] == 200
       data = response[:data]
@@ -29,14 +29,16 @@ class WeatherFacade
             icon: day[:day][:condition][:icon]
           }
         end,
-        hourly_weather: forecast[:forecastday].first[:hour].map do |hour|
-          {
-            time: hour[:time].split(" ")[1],  # remove date part @index 0
-            temperature: hour[:temp_f],
-            condition: hour[:condition][:text],
-            icon: hour[:condition][:icon]
-          }
-        end
+        hourly_weather: forecast[:forecastday].map do |day|
+          day[:hour].map do |hour|
+            {
+              time: hour[:time].split(" ")[1],  # remove date part @index 0
+              temperature: hour[:temp_f],
+              condition: hour[:condition][:text],
+              icon: hour[:condition][:icon]
+            }
+          end
+        end.flatten
       }
     else
       raise Faraday::BadRequestError, "Weather API error: #{response[:status]}, #{response[:data][:error][:message]}"
