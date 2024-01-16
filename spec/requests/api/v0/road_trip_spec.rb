@@ -64,7 +64,7 @@ RSpec.describe "Api::V0::RoadTrip", type: :request do
         }
       end
 
-      it "renders an error if the email is taken", :vcr do
+      it "renders an empty json object if the route is impossible", :vcr do
         post api_v0_road_trip_path,
           headers: valid_headers, params: @body, as: :json
 
@@ -72,6 +72,18 @@ RSpec.describe "Api::V0::RoadTrip", type: :request do
         expect(response).to have_http_status(:created)
         expect(data[:travel_time]).to include("impossible")
         expect(data[:weather_at_eta]).to eq({})
+      end
+
+      it "renders an error if the api key is invalid", :vcr do
+        body = {
+          origin: "New York City,NY",
+          destination: "Los Angeles,CA",
+          api_key: "invalid"
+        }
+        post api_v0_road_trip_path,
+          headers: valid_headers, params: body, as: :json
+
+        expect(response).to have_http_status(:unauthorized)
       end
     end
   end

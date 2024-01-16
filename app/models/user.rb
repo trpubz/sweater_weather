@@ -19,10 +19,13 @@ class User
   validates :api_key, uniqueness: true, allow_blank: true
 
   def self.authenticate(email, password)
-    user = User.find_by!(email: email)
+    user = User.find_by!(email: email)  # will raise Mongoid::Errors::DocumentNotFound if not found
 
-    return user if user && BCrypt::Password.new(user.password_digest) == password
-    nil
+    if user && BCrypt::Password.new(user.password_digest) == password
+      return user
+    else
+      raise Mongoid::Errors::DocumentNotFound.new(User, {password: password})
+    end
   end
 
   private

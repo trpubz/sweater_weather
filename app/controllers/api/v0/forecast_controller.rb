@@ -2,7 +2,7 @@ class Api::V0::ForecastController < ApplicationController
   def search
     application = "application/json"
     if request.headers["Accept"] != application
-      return render json: {error: "I'm only returning json so Accept must be application/json"}, status: 406
+      return render json: {error: "I'm only returning json; modify header => Accept: must be application/json"}, status: 406
     end
 
     lat_lon = MqFacade.get_lat_lng(params[:location])

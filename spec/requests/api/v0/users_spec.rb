@@ -68,6 +68,7 @@ RSpec.describe "Api::V0::Users", type: :request do
           headers: valid_headers, params: @body, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.content_type).to match(a_string_including("application/json"))
+        expect(response.body).to include("Password confirmation doesn't match Password")
       end
 
       it "renders an error if the email is taken" do

@@ -41,18 +41,21 @@ RSpec.describe "Api::V0::Sessions", type: :request do
     context "with invalid parameters" do
       before :each do
         DatabaseCleaner.clean
-        # passwords don't match
+
         @user = create :user
       end
 
       it "renders a JSON response for bad password" do
+        # passwords don't match
         body = {
           email: @user.email,
           password: "wrong"
         }
         post api_v0_sessions_path,
           headers: valid_headers, params: body, as: :json
+
         expect(response).to have_http_status(:not_found)
+        expect(response.body).to include("Document not found for class User with attributes {:password")
       end
 
       it "renders an error if the email is nonexistent" do
