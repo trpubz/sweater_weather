@@ -2,6 +2,10 @@ require "rails_helper"
 
 RSpec.describe RoadTripFacade do
   describe "::validate_api_key" do
+    before :each do
+      DatabaseCleaner.clean
+    end
+
     it "validates the api key" do
       user = create :user
       expect(RoadTripFacade.validate_api_key(user.api_key)).to be_truthy
