@@ -1,5 +1,7 @@
 require "active_support/core_ext/integer/time"
 
+ENV["REDIS_URL"] = "redis://localhost:6379/0"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -58,7 +60,8 @@ Rails.application.configure do
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  # config.cache_store = :redis_cache_store
+  $redis = Redis.new(url: ENV["REDIS_URL"])
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter = :resque

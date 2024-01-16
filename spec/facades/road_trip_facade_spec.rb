@@ -13,6 +13,7 @@ RSpec.describe RoadTripFacade do
         .to raise_error(Faraday::UnauthorizedError)
     end
   end
+
   describe "::create_road_trip" do
     it "creates a road trip", vcr: {record: :new_episodes} do
       details = RoadTripFacade.create_road_trip("Del Norte, CO, USA", "Monte Vista, CO")

@@ -66,6 +66,11 @@ RSpec.configure do |config|
 
   # Factory Bot
   config.include FactoryBot::Syntax::Methods
+
+  # redis
+  config.before(:each) do
+    $redis.flushdb
+  end
 end
 
 VCR.configure do |config|

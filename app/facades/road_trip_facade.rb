@@ -6,12 +6,22 @@ class RoadTripFacade
   end
 
   def self.create_road_trip(from, to)
-    # get directions with raise an error if there are no directions
-    travel_time = begin
-      MqFacade.get_directions(from, to)[:travel_time]
-    rescue   # provide default value
-      "impossible"
+    cache_key = "road_trip_dir:#{from}_#{to}"
+    # check cache first
+    cached_trip = $redis.get(cache_key)
+    travel_time = cached_trip
+    unless cached_trip
+      # get directions with raise an error if there are no directions
+      travel_time_data = begin
+        MqFacade.get_directions(from, to)[:travel_time]
+      rescue   # provide default value
+        "impossible"
+      end
+      # cache the result
+      $redis.set(cache_key, travel_time_data, ex: 48 * 60 * 60)
+      travel_time = travel_time_data
     end
+
 
     dest_weather = {}  # default to empty
 
