@@ -1,24 +1,26 @@
 # Sweater Weather
 
-You are a back-end developer working on a team that is building an application to plan road trips. This app will allow users to see the current weather as well as the forecasted weather at the destination.
+Learning Persona: back-end developer working on a team that is building an application to plan road trips. This app will allow users to see the current weather as well as the forecasted weather at the destination.
 
-Your team is working in a service-oriented architecture. The front-end will communicate with your back-end through an API. Your job is to expose that API that satisfies the front-end team’s requirements.
+The app is working in a service-oriented architecture. The front-end will communicate with the back-end through an API. The mission is to expose that API that satisfies the front-end team’s requirements.
 
-* Ruby version 
+## Ruby version 
 
 `3.2.2`
 
-* Configuration
+## Configuration
 
-`rails new <NAME> --api --skip-active-record  --skip-test --skip-system-test --skip-bundle` <br>
-Mongodb does not use ActiveRecord, and ActiveStorage can cause issues; ensure those are not included.<br>
+`rails new <NAME> --api --skip-active-record  --skip-test --skip-system-test --skip-bundle`
+
+Mongodb does not use ActiveRecord, and ActiveStorage can cause issues; ensure those are not included.
+
 `rails generate rspec:install`
 
-* Database creation/initialization
+## Database creation/initialization
 
-install; `gem 'mongoid', '~> 8.1.0'`<br>
-then `rails generate mongoid:config`<br>
-In the config/mongoid.yml file, modify the server_selection_timeout for self hosted mongodb:
+1. install; `gem 'mongoid', '~> 8.1.0'`<br>
+2. then `rails generate mongoid:config`<br>
+3. In the config/mongoid.yml file, modify the server_selection_timeout for self hosted mongodb:
 ```yaml
 development:
   clients:
@@ -30,24 +32,26 @@ development:
         server_selection_timeout: 1
 ```
 <br>
-Mongodb needs to be running locally for the test/development suite to function. 
+- Mongodb needs to be running locally for the test/development suite to function. 
 
-[Install MongoDB on macOS](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/) if you haven't already. <br>
-    If installed with Homebrew, then start up the mongodb server with <br>
-`brew services start mongodb/brew/mongodb-community` and stop with <br>
-`brew services stop mongodb/brew/mongodb-community`<br>
-Optionally: use MongoDB Compass to inspect local MongoDBs.
+  - [Install MongoDB on macOS](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/) if you haven't already.
+  - If installed with Homebrew, then start up the mongodb server with <br>
+  - `brew services start mongodb/brew/mongodb-community` and stop with <br>
+  - `brew services stop mongodb/brew/mongodb-community`<br>
+  - Optionally: use MongoDB Compass to inspect local MongoDBs.
 
-* How to run the test suite
+## How to run the test suite
 
-ensure `gem "mongoid-rspec"` (used in-place of Should Matchers on Models) && 
-`gem "database_cleaner-mongoid"` has been installed<br>
+- ensure `gem "mongoid-rspec"` (used in-place of Should Matchers on Models) && 
+`gem "database_cleaner-mongoid"` has been installed.
+
 Either in the `[rails_helper.rb]` or `before :each` in the spec files, add `DatabaseCleaner.clean` to clean the db. <br>
-*Run the tests* <br>
+
+### *Run the tests* <br>
 `bundle exec rspec` : for all tests<br>
 `bunlde exec rspec spec/api/v0` : for api endpoint tests
 
-* Services (job queues, cache servers, search engines, etc.)
+## Services (job queues, cache servers, search engines, etc.)
 
 This project uses Redis as a caching service.
 Start the redis server with `redis-server` <br>
